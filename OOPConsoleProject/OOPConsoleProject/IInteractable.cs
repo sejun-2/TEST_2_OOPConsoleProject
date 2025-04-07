@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace OOPConsoleProject
 {
-    public class Struct
+    public interface IInteractable
     {
+        public void Interact(Player player);
     }
 }

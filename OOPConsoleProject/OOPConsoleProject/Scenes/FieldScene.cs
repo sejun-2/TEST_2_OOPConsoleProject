@@ -10,6 +10,7 @@ namespace OOPConsoleProject.Scenes
     internal class FieldScene : BaseScene
     {   
         private ConsoleKey input;
+
         private string[] mapData;
         private bool[,] map;
 
@@ -18,9 +19,9 @@ namespace OOPConsoleProject.Scenes
             mapData = new string[]
             {
                 "########",
-                "#      #",
-                "#      #",
-                "#      #",
+                "#   #  #",
+                "#   #  #",
+                "#   #  #",
                 "#      #",
                 "########"
             };
@@ -34,10 +35,14 @@ namespace OOPConsoleProject.Scenes
                 }
             }
 
+            Game.Player.position = new Vector2(1, 1); // 플레이어의 시작 위치 설정
+            Game.Player.map = map; // 플레이어의 맵 설정
+
         }
         public override void Render()
         {
             PrintMap();
+            Game.Player.Print(); // 플레이어의 위치를 출력
         }
         public override void Input()
         {
@@ -45,10 +50,17 @@ namespace OOPConsoleProject.Scenes
         }
         public override void Update()
         {
+            Game.Player.Move(input); // 플레이어 이동
         }
         public override void Result()
         {
-
+            //foreach(GameObject gameObject in Game.GameObjects)
+            //{
+            //    if (Game.Player.position == go.position)
+            //    {
+            //        go.Interact(Game.Player); // 상호작용
+            //    }
+            //}
         }
 
         private void PrintMap()

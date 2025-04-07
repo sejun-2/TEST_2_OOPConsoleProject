@@ -13,6 +13,9 @@ namespace OOPConsoleProject
         private static Dictionary<string, BaseScene> sceneDic;
         private static BaseScene curScene;
 
+        private static Player player;
+        public static Player Player { get { return player; } }
+
         private static bool gameOver;
 
         public static void Run()
@@ -52,12 +55,15 @@ namespace OOPConsoleProject
             // 게임 설정
             gameOver = false;
 
+            // 플레이어 설정
+            player = new Player();
+
             //씬 설정
             sceneDic = new Dictionary<string, BaseScene>();
             sceneDic.Add("Title", new TitleScene());
-            sceneDic.Add("Test1", new TestScene01());
-            sceneDic.Add("Test2", new TestScene02());
-            sceneDic.Add("Test3", new TestScene03());
+            sceneDic.Add("Town", new TownScene());
+            sceneDic.Add("Field", new FieldScene());
+           
 
             curScene = sceneDic["Title"];
         }
@@ -67,8 +73,8 @@ namespace OOPConsoleProject
         /// </summary>
         public static void End()
         {
-            Console.WriteLine("게임 종료");
-            gameOver = true;
+            //Console.WriteLine("게임 종료");
+            //gameOver = true;
         }
 
 

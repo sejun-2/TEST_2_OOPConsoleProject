@@ -26,7 +26,7 @@ namespace OOPConsoleProject.Scenes
         }
         public override void Result()
         {
-            Game.ChangeScene("Test1");
+            Game.ChangeScene("Town");
         }
     
     
