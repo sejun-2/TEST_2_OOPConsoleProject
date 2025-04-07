@@ -4,7 +4,10 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("콘솔 게임 시작");
+
+            // 1. 캐릭터 생성
+
         }
     }
 }
