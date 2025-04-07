@@ -18,13 +18,16 @@ namespace OOPConsoleProject
         public static void Run()
         {
             Start();
+
             while (gameOver == false)
             {
+                Console.Clear();
                 curScene.Render();
                 curScene.Input();
                 curScene.Update();
                 curScene.Result();
             }
+
             End();
         }
 

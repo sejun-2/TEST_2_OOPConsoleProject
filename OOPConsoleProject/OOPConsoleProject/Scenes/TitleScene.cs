@@ -14,19 +14,12 @@ namespace OOPConsoleProject.Scenes
             Console.WriteLine("타이틀 씬");
             Console.WriteLine("1. 게임 시작");
             Console.WriteLine("2. 게임 종료");
+            Console.WriteLine("계속하려면 아무키나 누르세요..");
         }
         public override void Input()
         {
-            Console.WriteLine("입력 : ");
-            string input = Console.ReadLine();
-            if (input == "1")
-            {
-                // 게임 시작
-            }
-            else if (input == "2")
-            {
-                // 게임 종료
-            }
+            Console.ReadKey(true);  // true는 키 입력 키를 화면에 표시하지 않음
+
         }
         public override void Update()
         {

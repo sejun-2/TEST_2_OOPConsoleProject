@@ -4,9 +4,9 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("콘솔 게임 시작");
+            Game.Run();
 
-            // 1. 캐릭터 생성
+
 
         }
     }
