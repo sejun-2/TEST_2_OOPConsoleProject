@@ -45,4 +45,14 @@
 
 
 
+DFS -> 미로 생성
+BFS -> 길찾기       시도 해보자.
+
+
+	
+1. 버그 터지면, 의도대로 안돌아가면 캡처 해주라. 자료 축적해주라	!!!!!
+
+수업에 참고할 소스코드 : https://github.com/jungtaek6681?tab=repositories
+강의 참고용 드라이브 : https://drive.google.com/drive/folders/1PxS_U06SzaCtSAgpobjFGepe_5Oy4Q0h?usp=drive_link
+알고리즘 시각화 사이트 : https://www.cs.usfca.edu/~galles/visualization/Algorithms.html"
 
