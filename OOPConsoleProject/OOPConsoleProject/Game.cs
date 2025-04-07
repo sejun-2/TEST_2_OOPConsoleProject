@@ -23,12 +23,25 @@ namespace OOPConsoleProject
             {
                 Console.Clear();
                 curScene.Render();
+                Console.WriteLine();
                 curScene.Input();
+                Console.WriteLine();
                 curScene.Update();
+                Console.WriteLine();
                 curScene.Result();
             }
 
             End();
+        }
+
+        public static void ChangeScene(string sceneName)
+        {
+            if (sceneDic.ContainsKey(sceneName) == false)
+            {
+                Console.WriteLine("존재하지 않는 씬입니다.");
+                return;
+            }
+            curScene = sceneDic[sceneName];
         }
 
         /// <summary>
@@ -42,6 +55,9 @@ namespace OOPConsoleProject
             //씬 설정
             sceneDic = new Dictionary<string, BaseScene>();
             sceneDic.Add("Title", new TitleScene());
+            sceneDic.Add("Test1", new TestScene01());
+            sceneDic.Add("Test2", new TestScene02());
+            sceneDic.Add("Test3", new TestScene03());
 
             curScene = sceneDic["Title"];
         }
