@@ -15,7 +15,7 @@ namespace OOPConsoleProject
         {
             Console.SetCursorPosition(position.x, position.y);
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.Write("P");
+            Console.Write('P');
             Console.ResetColor();
         }
 
@@ -37,8 +37,6 @@ namespace OOPConsoleProject
                 case ConsoleKey.RightArrow:
                     targetPos.x++;
                     break;
-                default:
-                    break;
             }
 
             if (map[targetPos.y, targetPos.x] == true)
@@ -46,9 +44,5 @@ namespace OOPConsoleProject
                 position = targetPos;
             }
         }
-
-    
-
-
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOPConsoleProject.NewFolder
+namespace OOPConsoleProject
 {
     public abstract class BaseScene
     {
@@ -12,7 +12,5 @@ namespace OOPConsoleProject.NewFolder
         public abstract void Input();
         public abstract void Update();
         public abstract void Result();
-
-
     }
 }

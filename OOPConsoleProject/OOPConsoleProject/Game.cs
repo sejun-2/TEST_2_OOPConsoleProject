@@ -1,5 +1,4 @@
-﻿using OOPConsoleProject.NewFolder;
-using OOPConsoleProject.Scenes;
+﻿using OOPConsoleProject.Scenes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +25,6 @@ namespace OOPConsoleProject
             {
                 Console.Clear();
                 curScene.Render();
-                Console.WriteLine();
                 curScene.Input();
                 Console.WriteLine();
                 curScene.Update();
@@ -39,11 +37,6 @@ namespace OOPConsoleProject
 
         public static void ChangeScene(string sceneName)
         {
-            if (sceneDic.ContainsKey(sceneName) == false)
-            {
-                Console.WriteLine("존재하지 않는 씬입니다.");
-                return;
-            }
             curScene = sceneDic[sceneName];
         }
 
@@ -52,18 +45,19 @@ namespace OOPConsoleProject
         /// </summary>
         private static void Start()
         {
+            Console.CursorVisible = false;
+
             // 게임 설정
             gameOver = false;
 
             // 플레이어 설정
             player = new Player();
 
-            //씬 설정
+            // 씬 설정
             sceneDic = new Dictionary<string, BaseScene>();
-            sceneDic.Add("Title", new TitleScene());
+            sceneDic.Add("Title", new TItleScene());
             sceneDic.Add("Town", new TownScene());
             sceneDic.Add("Field", new FieldScene());
-           
 
             curScene = sceneDic["Title"];
         }
@@ -71,27 +65,9 @@ namespace OOPConsoleProject
         /// <summary>
         /// 게임의 마무리 작업 진행
         /// </summary>
-        public static void End()
+        private static void End()
         {
-            //Console.WriteLine("게임 종료");
-            //gameOver = true;
+
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

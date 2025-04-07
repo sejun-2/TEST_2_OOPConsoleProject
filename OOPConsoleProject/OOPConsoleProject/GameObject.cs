@@ -28,6 +28,5 @@ namespace OOPConsoleProject
         }
 
         public abstract void Interact(Player player);
-
     }
 }
