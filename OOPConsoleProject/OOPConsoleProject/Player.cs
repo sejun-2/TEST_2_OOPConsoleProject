@@ -10,7 +10,7 @@ namespace OOPConsoleProject
     {
         public Vector2 position;
         private Inventory inventory;
-        public Inventory Inventory { get { return inventory; } }
+        public Inventory Inventory { get { return inventory; } } 
         public bool[,] map;
 
         private int curHP;
